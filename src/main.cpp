@@ -136,12 +136,13 @@ class $modify(EditorUIHook, EditorUI) {
                 placedObjs->addObject(obj);
             }
         }
-
-        m_editorLayer->addToUndoList(UndoObject::createWithArray(placedObjs, UndoCommand::Paste), true);
+        
         m_editorLayer->addToUndoList(UndoObject::createWithArray(objs, UndoCommand::DeleteMulti), true);
         
         m_editorLayer->removeObject(p1, true);
         m_editorLayer->removeObject(p2, true);
+
+        m_editorLayer->addToUndoList(UndoObject::createWithArray(placedObjs, UndoCommand::Paste), true);
 
         showNotification("successfully filled rect :3c", false);
     }
@@ -180,7 +181,7 @@ class $modify(EditorUIHook, EditorUI) {
 
         return true;
     }
-    
+
     void createMoveMenu() {
 		EditorUI::createMoveMenu();
         // @geode-ignore(unknown-resource)
