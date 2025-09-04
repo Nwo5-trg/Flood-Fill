@@ -136,7 +136,7 @@ class $modify(EditorUIHook, EditorUI) {
                 placedObjs->addObject(obj);
             }
         }
-        
+
         m_editorLayer->addToUndoList(UndoObject::createWithArray(objs, UndoCommand::DeleteMulti), true);
         
         m_editorLayer->removeObject(p1, true);
@@ -184,7 +184,6 @@ class $modify(EditorUIHook, EditorUI) {
 
     void createMoveMenu() {
 		EditorUI::createMoveMenu();
-        // @geode-ignore(unknown-resource)
         auto* btn = this->getSpriteButton("Sheet.png"_spr, menu_selector(EditorUIHook::onFill), nullptr, 1);
         m_editButtonBar->m_buttonArray->addObject(btn);
         auto rows = GameManager::sharedState()->getIntGameVariable("0049");
