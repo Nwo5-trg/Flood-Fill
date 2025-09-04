@@ -18,6 +18,9 @@
 			"importance": "superseded"
 		}
 	},
+	"resources": {
+		"spritesheets": { "Sheet": ["resources/Sheet/*.png"] }
+    },
 	"links": {
 		"source": "https://github.com/Nwo5-trg/Flood-Fill",
 		"community": "https://discord.gg/AeFeYWGUxZ"

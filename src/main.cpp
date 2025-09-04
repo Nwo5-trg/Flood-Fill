@@ -180,13 +180,19 @@ class $modify(EditorUIHook, EditorUI) {
 
         return true;
     }
-    // temp for testing
-    void onPlayback(CCObject* sender) {
-        onFill(nullptr);
-    }
+    
+    void createMoveMenu() {
+		EditorUI::createMoveMenu();
+        // @geode-ignore(unknown-resource)
+        auto* btn = this->getSpriteButton("Sheet.png"_spr, menu_selector(EditorUIHook::onFill), nullptr, 1);
+        m_editButtonBar->m_buttonArray->addObject(btn);
+        auto rows = GameManager::sharedState()->getIntGameVariable("0049");
+        auto cols = GameManager::sharedState()->getIntGameVariable("0050");
+        m_editButtonBar->reloadItems(rows, cols);
+	}
 };
 
-// hopefully will stop most crashes
+// hopefully will stop most *shenanigans*
 class $modify(LevelEditorLayer) {
     void removeObject(GameObject* p0, bool p1) {
         floodFilling = false;
