@@ -1,0 +1,39 @@
+{
+	"geode": "4.8.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "nwo5.flood_fill",
+	"name": "Flood Fill",
+	"version": "v1.0.0",
+	"developer": "Nwo5",
+	"description": "rawr",
+	"tags": ["utility", "editor", "offline"],
+	"incompatibilities": {
+		"nwo5.quick_fill": {
+			"version": "1.0.0",
+			"importance": "superseded"
+		}
+	},
+	"links": {
+		"source": "https://github.com/Nwo5-trg/Flood-Fill",
+		"community": "https://discord.gg/AeFeYWGUxZ"
+	},
+	"settings": {
+		"notifications": {
+			"type": "string",
+			"name": "Notifications",
+			"default": "All",
+			"one-of": ["All", "Only Errors", "None"]
+		},
+		"diagonal": {
+			"type": "bool",
+			"name": "Diagonal",
+			"description": "check for diagonal neighbours w/ flood fill",
+			"default": false
+		}
+	}
+}
