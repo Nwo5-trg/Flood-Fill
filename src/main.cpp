@@ -159,7 +159,7 @@ class $modify(EditorUIHook, EditorUI) {
     void showNotification(std::string text, bool error) {
         int mode = m_fields->notificationMode;
         if (mode == 0) return;
-        if (mode == 1 && error) return;
+        if (mode == 1 && !error) return;
         Notification::create(
             text, error ? NotificationIcon::Error : NotificationIcon::Success
         )->show();
