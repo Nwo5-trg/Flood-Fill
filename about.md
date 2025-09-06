@@ -11,3 +11,4 @@ btw flood fill only works within the max bounds of ur outline selection so its n
 
 ## Credits
 - ***Taki*** for making me actually rewrite ts
+- ***Fritz*** one "!" i missed (tyyy)

@@ -8,7 +8,7 @@
 	},
 	"id": "nwo5.flood_fill",
 	"name": "Flood Fill",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "Nwo5",
 	"description": "rawr",
 	"tags": ["utility", "editor", "offline"],
