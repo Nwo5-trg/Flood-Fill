@@ -78,7 +78,7 @@ class $modify(EditorUIHook, EditorUI) {
                 if (box.containsPoint(pos)) return nullptr;
             }
 
-            auto neighbour = static_cast<GameObject*>(pasteObjects(objString, true, true)->firstObject());
+            auto neighbour = static_cast<GameObject*>(pasteObjects(objString, false, true)->firstObject());
             moveObject(neighbour, pos - neighbour->getPosition());
             placedObjs->addObject(neighbour);
 
@@ -131,7 +131,7 @@ class $modify(EditorUIHook, EditorUI) {
 
         for (float x = min.x; x <= max.x; x += gridSize) {
             for (float y = min.y; y <= max.y; y += gridSize) {
-                auto obj = static_cast<GameObject*>(pasteObjects(objString, true, true)->firstObject());
+                auto obj = static_cast<GameObject*>(pasteObjects(objString, false, true)->firstObject());
                 moveObject(obj, ccp(x, y) - obj->getPosition());
                 placedObjs->addObject(obj);
             }
